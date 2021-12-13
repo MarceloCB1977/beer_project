@@ -1,0 +1,54 @@
+{% extends 'beer/base.html' %}
+{% load static %}
+
+{% block body_block %}
+
+  <body>
+    <center>
+      <br>
+      <div class="card mb-3" style="max-width: 800px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{beer.image.url}}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{beer}}</h5>
+              <p class="card-text">{{beer.desc}}</p>
+              <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Food Pairing
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">{{beer.food_pair}}</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Reccomendation
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">{{beer.recommend}}</div>
+                  </div>
+                  <div class="">
+                    <br>
+                    <h6>Alcohol Content<em>(ABV)</em>: <em>{{beer.ABV_min}}% to {{beer.ABV_max}}%</em></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="{% url 'beer:index' %}" class="btn btn-outline-secondary btn-sm">HOME</a>
+        </div>
+      </div>
+    </center>
+  </body>
+
+{% endblock %}

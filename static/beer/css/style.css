@@ -1,0 +1,28 @@
+
+body {
+  background: #bfbfbf;
+}
+
+.img-thumbnail {
+  width: 100px;
+}
+
+table {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.lista {
+  width: 45em;
+
+}
+
+.fundo {
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.butt {
+  width: 100%;
+}

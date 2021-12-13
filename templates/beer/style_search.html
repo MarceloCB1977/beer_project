@@ -1,0 +1,33 @@
+{% extends 'beer/base.html' %}
+{% load static %}
+
+{% block body_block %}
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Search results</h1>
+    {% if searched %}
+    <table class="table table-striped table-hover mmm">
+      <thead>
+        <th>Style Name</th>
+        <th>Style Family</th>
+        <th> </th>
+      </thead>
+      {% for x in style_search %}
+      <tr>
+        <td>{{ x.style_name }}</td>
+        <td>{{ x.style_key_family | upper }}</td>
+        <td align="right">
+          <a href="{% url 'beer:beer_detail' x.id %}" class="btn btn-outline-secondary btn-sm">Details</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}
+    <center>
+      <h1>NO SEARCH!!!</h1>
+    </center>
+  </div>
+</div>
+{% endif %}
+{% endblock %}

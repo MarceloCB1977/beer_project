@@ -1,0 +1,21 @@
+{% extends 'beer/base.html' %}
+{% load static %}
+
+{% block body_block %}
+
+<div class="container">
+
+    <h1>XXX</h1>
+
+      <form class="form-control" method="post" action="{% url 'beer:beer_search' %}">
+        {% csrf_token %}
+        {{ beer_form.as_p }}
+        <button class="btn btn-secondary" type="submit">Search</button>
+      </form>
+
+  
+</div>
+
+
+
+{% endblock %}

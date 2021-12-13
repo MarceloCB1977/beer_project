@@ -1,0 +1,56 @@
+{% extends 'beer/base.html' %}
+{% load static %}
+
+{% block body_block %}
+  <body>
+    <div class="container">
+      <div class="jumbotron text-center">
+        <h1>THE BEER PROJECT</h1>
+        <br>
+        <h3>Welcome to The Beer Project</h3>
+        <h6>If you already know beers, you can search by Style Name here</h6>
+        <center>
+          <form class="d-flex w-50" method="post" action="{% url 'beer:style_search' %}">
+            {% csrf_token %}
+            <input class="form-control me-2" name="searched" type="search" placeholder="Enter Beer Style Name. - e.g. Stout" aria-label="Search">
+            <button class="btn btn-secondary" type="submit">Search</button>
+          </form>
+        </center>
+
+        <br><br>
+
+        <div class="container fundo">
+          <div class="row">
+            <div class="col">
+              <center>
+              <h6>If you don't know Beers. You are in the right place.</h6>
+              <h6>Just answer the forms, and we will recommed some!</h6>
+              </center>
+              <form class="form-control text-start" method="post" action="{% url 'beer:beer_search' %}">
+                {% csrf_token %}
+                {{ beer_form.as_p }}
+                <button class="btn btn-secondary butt" type="submit">Search</button>
+              </form>
+            </div>
+            <div class="col">
+              <img src="{% static 'beer/images/beer_home.jpg' %}" alt="sem imagem" class="rounded shadow w-100">
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <br><br>
+
+
+      </div>
+    </div>
+  </body>
+{% endblock %}

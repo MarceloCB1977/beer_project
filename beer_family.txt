@@ -1,0 +1,14 @@
+
+{
+  'alt':'As cervejas Altbier, apresentam um corpo médio e coloração cobre brilhante,
+  além de um incrível equilíbrio entre o amargor frisante do lúpulo e a complexidade dos maltes especiais.
+  O teor alcoólico varia entre 4,3% a 5,5%.',
+
+  'pale ale':'Além da variação perceptível em sua tonalidade, as cervejas Pale Ale carregam um peculiar aroma terroso e herbal.
+  O seu corpo, que fica mais robusto e espumoso pela fermentação, pode ganhar um sabor que remete ao caramelo.
+  As notas frutadas também podem ser sentidas em alguns estilos. Por isso, podemos considerar que a cerveja Pale Ale é mais complexa ao degustá-la,
+  característica que fica ainda mais nítida ao avaliarmos os tipos derivados mais comuns da bebida.',
+
+  
+
+}

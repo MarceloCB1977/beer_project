@@ -1,0 +1,37 @@
+{% extends 'beer/base.html' %}
+{% load static %}
+
+{% block body_block %}
+  <body>
+    <div class="container">
+      <div class="jumbotron text-center">
+        <h1>THE BEER PROJECT - BEER RESULT PAGE</h1>
+        <br>
+        <table class="table table-striped table-sm table-hover mmm">
+
+          <thead>
+            <th>Style Name</th>
+            <th>ABV</th>
+            <th>IBU_min</th>
+            <th>IBU_max</th>
+            <th>SRM_min</th>
+            <th>SRM_max</th>
+            <th>Image</th>
+          </thead>
+          {% for b in beer %}
+          <tr>
+            <td>{{ b.style_name }}</td>
+            <td>{{ b.ABV_max }}</td>
+            <td>{{ b.IBU_min }}</td>
+            <td>{{ b.IBU_max }}</td>
+            <td>{{ b.SRM_min }}</td>
+            <td>{{ b.SRM_max }}</td>
+            <td><img src="{{beer.image.url}}" alt="deu merda" class="img-thumbnail"></td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+
+  </body>
+{% endblock %}
