@@ -85,8 +85,12 @@ WSGI_APPLICATION = 'beer_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dfpl0pcm4bvt3t',
+        'USER': 'fbaushbpolyvii',
+        'PASSWORD': '2ce809b82c13269ae303616bc391578aa69a67815ed832c6aed75fb7f25555c8',
+        'HOST': 'ec2-18-208-97-23.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
