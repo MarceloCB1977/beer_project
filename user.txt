@@ -1,2 +1,0 @@
-login - beer
-sen - beerpass
